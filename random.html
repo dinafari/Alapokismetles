@@ -1,0 +1,67 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random</title>
+    </head>
+    <body>
+        <script>
+           //1-3000 között 4 szám generálása véletlenszerűen
+
+            function szammGenerator(){
+                let szamok =[];
+                for(let i=0; i<4; i++ ){
+                    let randomszam= Math.floor(Math.random()*3000)+1;
+                    szamok.push(randomszam);
+
+                }return szamok;
+
+                
+            }
+
+            const randomSzamok = szammGenerator();
+            console.log(randomSzamok);
+
+            //legkisebb szam:
+
+            const legkisebbszam = Math.min(...randomSzamok);
+            console.log("A legkisebb szám",legkisebbszam);
+
+            //Legnagyobb szám:
+
+            const Legnagyobbszam =Math.max(...randomSzamok);
+            console.log("A legnagyobb szám:",Legnagyobbszam)
+
+            // Pímszámok kiszúrése:
+
+            function prim(szam){
+                if(szam< 2)return false;
+                for(let i = 2 ;i <=Math.sqrt(szam);i++){
+                    if(szam % i ===0)return false;
+
+                }
+                return true;
+
+            }
+
+            const  primSzamok = randomSzamok.filter(prim);
+            console.log("Prímszámok:",primSzamok);
+
+
+
+             
+
+            
+            
+          
+            
+
+
+
+
+
+
+        </script>
+
+    </body>
+</html>
