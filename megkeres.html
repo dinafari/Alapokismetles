@@ -1,0 +1,55 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width =device-width,initial-scale=1.0">
+        <title>feladatok</title>
+    </head>
+    <body>
+        <script>
+            const szamok =[10,33,6,9,66,88];
+            console.log(szamok);
+
+            //Legnagyobb szám:
+
+            const Legnagyobbszam= Math.max(...szamok);
+            console.log("A legnagyobb szám:",Legnagyobbszam)
+
+            //Legkisebb szám:
+
+            const legkisebbszam = Math.min(...szamok);
+            console.log("A legjisebb szám:",legkisebbszam);
+
+         
+           //Páros s számok kiszűrése: így is jó itt az element atömb elemeit jelöli:
+
+           // const Parosszamok =szamok.filter(function(element){
+             //   return element % 2 ===0;
+           // });
+           // console.log(`Paros  szamok:${Parosszamok}`)
+
+            const Parosszamok = szamok.filter(szam => szam %2 ===0);
+
+           console.log(`Páros számok:${Parosszamok}`);
+
+           // Páratlan számok kiszűrése:
+
+           const Paratlanszámok = szamok.filter(szam=> szam %2 !==0 );
+            console.log(`Páratlan számok:${Paratlanszámok}`);
+        
+
+            
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+        
+    </body>
+</html>
